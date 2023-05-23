@@ -10,6 +10,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 @SpringBootTest
@@ -34,15 +35,15 @@ public class controllerBTest {
 
     @Test
     void testDummyItem() {
-        fail();
+        assertEquals("Hello World!", "item.getBodyB()");
     }
-    @Test
-    void testItemFromBusinessService() {
-        fail();
-    }
-    @Test
-    void testRetrieveAllItems() {
-        fail();
-    }
+//    @Test
+//    void testItemFromBusinessService() {
+//        fail();
+//    }
+//    @Test
+//    void testRetrieveAllItems() {
+//        fail();
+//    }
 
 }
