@@ -47,3 +47,11 @@ jobs:
           REMOTE_USER: ${{ secrets.SSH_USER }}
           TARGET: ${{ secrets.WORK_DIR}}
           EXCLUDE: "/dist/, /node_modules/"
+
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key : ${{ secrets.SSH_PRIVATE_KEY }}
+        script: /root/app/script/start_springboot.sh
