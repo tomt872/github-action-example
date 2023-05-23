@@ -48,7 +48,7 @@ jobs:
           TARGET: ${{ secrets.WORK_DIR}}
           EXCLUDE: "/dist/, /node_modules/"
 
-    - name: executing remote ssh commands using password
+    - name: executing remote ssh commands using key
       uses: appleboy/ssh-action@v0.1.10
       with:
         host: ${{ secrets.SSH_HOST }}
