@@ -20,7 +20,7 @@ public class ItemController {
 
     @GetMapping("/dummy-item")
     public Item dummyItem(){
-        return new Item(1,"Ball2", 10, 100);
+        return new Item(1,"Ball3", 10, 100);
     }
 
     @GetMapping("/item-from-business-service")
