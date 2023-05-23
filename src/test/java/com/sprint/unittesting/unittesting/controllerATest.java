@@ -8,7 +8,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-class controller1Test {
+class controllerATest {
     private TestRestTemplate restTemplate;
     @BeforeEach
     void setUp(){
@@ -17,7 +17,7 @@ class controller1Test {
     @Test
     void testHelloWorld() {
         var item = restTemplate.getForEntity("http://localhost:8080/", String.class);
-        assertEquals("Hello World! ", item.getBody());
+        assertEquals("Hello World!", item.getBody());
     }
     @Test
     void testDummyItem() {
