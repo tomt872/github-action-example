@@ -30,8 +30,14 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-
-    - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+        
+    - name: Deploy to Server
+      uses: easingthemes/ssh-deploy@main
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "target/"
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          TARGET: ${{ secrets.WORK_DIR}}
+          EXCLUDE: "/dist/, /node_modules/"
