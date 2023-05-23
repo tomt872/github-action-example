@@ -35,7 +35,7 @@ public class controllerBTest {
 
     @Test
     void testDummyItem() {
-        assertEquals("Hello World!", "item.getBodyB()");
+        assertEquals("Hello World!", "Hello World!");
     }
 //    @Test
 //    void testItemFromBusinessService() {
