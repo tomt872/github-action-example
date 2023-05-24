@@ -21,7 +21,7 @@ class controllerATest {
     }
     @Test
     void testDummyItem() {
-        assertEquals("Hello World!", "Hello World! 2");
+        assertEquals("Hello World!", "Hello World!");
     }
 //    @Test
 //    void testItemFromBusinessService() {
